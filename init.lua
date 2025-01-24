@@ -66,8 +66,8 @@ toolcap_monoids.dig_speed = item_monoids.make_monoid("dig_speed", {
 				return {}
 			elseif type(multiplier) == "number" then
 				for _, times in pairs(dig_speeds) do
-					for i = 1, #times do
-						times[i] = times[i] * multiplier
+					for level, _ in pairs(times) do
+						times[level] = times[level] * multiplier
 					end
 				end
 			elseif type(multiplier) == "table" then
